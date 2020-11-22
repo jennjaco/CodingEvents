@@ -9,6 +9,8 @@ namespace CodingEvents.Models
         public string Location { get; set; }
         public string Attendees { get; set; }
 
+        public EventType Type { get; set; }
+
         public int Id { get; }
         private static int nextId = 1;
 

@@ -26,9 +26,13 @@
         <span asp-validation-for="Location"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Attendees"></label>
+        <label asp-for="Attendees">Number of People Attending:</label>
         <input asp-for="Attendees" />
         <span asp-validation-for="Attendees"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Type">Event Types</label>
+        <select asp-for="Type" asp-items="Model.EventTypes"></select>
     </div>
     <input type="submit" value="Add Event" />
 </form>
