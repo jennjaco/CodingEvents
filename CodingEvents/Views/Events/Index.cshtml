@@ -1,6 +1,4 @@
-﻿@using CodingEvents.Models
- 
-@model List<Event>;
+﻿@model List<CodingEvents.Models.Event>
 
 <h1>Coding Events</h1>
 
@@ -38,19 +36,19 @@ else
                 Attendees
             </th>
             <th>
-                Type
+                Category
             </th>
         </tr>
         @foreach (var evt in Model)
         {
     <tr>
         <td>@evt.Id</td>
-        <td>@evt.Name</td>
+        <td><a asp-controller="Events" asp-action="Detail" asp-route-id="@evt.Id">@evt.Name</a></td>
         <td>@evt.Description</td>
         <td>@evt.ContactEmail</td>
         <td>@evt.Location</td>
         <td>@evt.Attendees</td>
-        <td>@evt.Type</td>
+        <td>@evt.Category.Name</td>
     </tr>
         }
     </table>

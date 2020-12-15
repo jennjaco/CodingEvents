@@ -9,18 +9,18 @@ namespace CodingEvents.Models
         public string Location { get; set; }
         public string Attendees { get; set; }
 
-        public EventType Type { get; set; }
+        public EventCategory Category { get; set; }
 
-        public int Id { get; }
-        private static int nextId = 1;
+        public int CategoryId { get; set; }
+
+        public int Id { get; set; }
+        
 
         public Event()
         {
-            Id = nextId;
-            nextId++;
         }
 
-        public Event(string name, string description, string contactEmail, string location, string attendees, bool isTrue) : this()
+        public Event(string name, string description, string contactEmail, string location, string attendees, bool isTrue)
         {
             Name = name;
             Description = description;
